@@ -21,6 +21,8 @@ const getUrl = async (req: NextApiRequest, res: NextApiResponse) => {
     return res.status(404).json({ message: "slug not found" });
   }
 
+  res.setHeader("Cache-Control", "s-maxage=10000000, stale-while-revalidate");
+
   return res.json(data);
 };
 
