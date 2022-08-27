@@ -1,4 +1,4 @@
-// src/pages/api/examples.ts
+// src/pages/api/get-url/[slug].ts
 import type { NextApiRequest, NextApiResponse } from "next";
 import { prisma } from "@/server/db/client";
 
